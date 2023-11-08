@@ -104,7 +104,7 @@ function App() {
         {(winner || draw) && <GameOver winner={winner} onSelect={gameReset} />}
         <GameBoard onSelectSquare={handlerSelectSquare} board={gameBoard} />
       </div>
-      <Log turns={gameTurns} />
+      {gameTurns.length > 0 ? <Log turns={gameTurns} /> : null}
     </main>
   );
 }
